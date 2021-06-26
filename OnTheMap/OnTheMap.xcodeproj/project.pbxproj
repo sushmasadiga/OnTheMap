@@ -7,19 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BDAB8BC2687B07F002E4A26 /* OTMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8BB2687B07F002E4A26 /* OTMModel.swift */; };
+		4BDAB8BE2687B09A002E4A26 /* OTMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8BD2687B09A002E4A26 /* OTMClient.swift */; };
+		4BDAB8C02687B0AF002E4A26 /* LogInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8BF2687B0AF002E4A26 /* LogInRequest.swift */; };
+		4BDAB8C22687B0C9002E4A26 /* OTMResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8C12687B0C9002E4A26 /* OTMResponse.swift */; };
+		4BDAB8C42687B0E6002E4A26 /* SessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8C32687B0E6002E4A26 /* SessionResponse.swift */; };
+		4BDAB8C62687B0FA002E4A26 /* RequestTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8C52687B0FA002E4A26 /* RequestTokenResponse.swift */; };
+		4BDAB8C82687B117002E4A26 /* CreateStudentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8C72687B117002E4A26 /* CreateStudentResponse.swift */; };
+		4BDAB8CA2687B12C002E4A26 /* GetStudentLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8C92687B12C002E4A26 /* GetStudentLocationResponse.swift */; };
+		4BDAB8CC2687B14C002E4A26 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8CB2687B14C002E4A26 /* Student.swift */; };
+		4BDAB8CE2687B165002E4A26 /* GetPublicUserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8CD2687B165002E4A26 /* GetPublicUserDataResponse.swift */; };
+		4BDAB8D02687B192002E4A26 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8CF2687B192002E4A26 /* GradientView.swift */; };
+		4BDAB8D22687B1A4002E4A26 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8D12687B1A4002E4A26 /* Colours.swift */; };
+		4BDAB8D42687B1BE002E4A26 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8D32687B1BE002E4A26 /* LoginTextField.swift */; };
+		4BDAB8D62687B1CC002E4A26 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8D52687B1CC002E4A26 /* LoginButton.swift */; };
+		4BDAB8D82687B222002E4A26 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8D72687B222002E4A26 /* MapViewController.swift */; };
+		4BDAB8DA2687B238002E4A26 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8D92687B238002E4A26 /* ListViewController.swift */; };
+		4BDAB8DC2687B24E002E4A26 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8DB2687B24E002E4A26 /* AddLocationViewController.swift */; };
+		4BDAB8DE2687B268002E4A26 /* InformationPostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8DD2687B268002E4A26 /* InformationPostingViewController.swift */; };
 		4BE882522687AA8E00CD2C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE882512687AA8E00CD2C20 /* AppDelegate.swift */; };
 		4BE882542687AA8E00CD2C20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE882532687AA8E00CD2C20 /* SceneDelegate.swift */; };
-		4BE882562687AA8E00CD2C20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE882552687AA8E00CD2C20 /* ViewController.swift */; };
+		4BE882562687AA8E00CD2C20 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE882552687AA8E00CD2C20 /* LoginViewController.swift */; };
 		4BE882592687AA8E00CD2C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE882572687AA8E00CD2C20 /* Main.storyboard */; };
 		4BE8825B2687AA9000CD2C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE8825A2687AA9000CD2C20 /* Assets.xcassets */; };
 		4BE8825E2687AA9000CD2C20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE8825C2687AA9000CD2C20 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BDAB8BB2687B07F002E4A26 /* OTMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMModel.swift; sourceTree = "<group>"; };
+		4BDAB8BD2687B09A002E4A26 /* OTMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMClient.swift; sourceTree = "<group>"; };
+		4BDAB8BF2687B0AF002E4A26 /* LogInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRequest.swift; sourceTree = "<group>"; };
+		4BDAB8C12687B0C9002E4A26 /* OTMResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMResponse.swift; sourceTree = "<group>"; };
+		4BDAB8C32687B0E6002E4A26 /* SessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResponse.swift; sourceTree = "<group>"; };
+		4BDAB8C52687B0FA002E4A26 /* RequestTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenResponse.swift; sourceTree = "<group>"; };
+		4BDAB8C72687B117002E4A26 /* CreateStudentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentResponse.swift; sourceTree = "<group>"; };
+		4BDAB8C92687B12C002E4A26 /* GetStudentLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStudentLocationResponse.swift; sourceTree = "<group>"; };
+		4BDAB8CB2687B14C002E4A26 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		4BDAB8CD2687B165002E4A26 /* GetPublicUserDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPublicUserDataResponse.swift; sourceTree = "<group>"; };
+		4BDAB8CF2687B192002E4A26 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		4BDAB8D12687B1A4002E4A26 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		4BDAB8D32687B1BE002E4A26 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		4BDAB8D52687B1CC002E4A26 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		4BDAB8D72687B222002E4A26 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4BDAB8D92687B238002E4A26 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		4BDAB8DB2687B24E002E4A26 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		4BDAB8DD2687B268002E4A26 /* InformationPostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPostingViewController.swift; sourceTree = "<group>"; };
 		4BE8824E2687AA8E00CD2C20 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE882512687AA8E00CD2C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BE882532687AA8E00CD2C20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4BE882552687AA8E00CD2C20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4BE882552687AA8E00CD2C20 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4BE882582687AA8E00CD2C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BE8825A2687AA9000CD2C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BE8825D2687AA9000CD2C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,10 +73,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BDAB8B42687AF97002E4A26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BDAB8B72687AFC8002E4A26 /* Data */,
+				4BDAB8B82687AFE5002E4A26 /* OTM Client */,
+				4BDAB8B92687AFEF002E4A26 /* OTM Request */,
+				4BDAB8BA2687AFFA002E4A26 /* OTM Response */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BDAB8B52687AF9E002E4A26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BDAB8CF2687B192002E4A26 /* GradientView.swift */,
+				4BDAB8D12687B1A4002E4A26 /* Colours.swift */,
+				4BDAB8D32687B1BE002E4A26 /* LoginTextField.swift */,
+				4BDAB8D52687B1CC002E4A26 /* LoginButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BDAB8B62687AFA6002E4A26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BE882552687AA8E00CD2C20 /* LoginViewController.swift */,
+				4BDAB8D72687B222002E4A26 /* MapViewController.swift */,
+				4BDAB8D92687B238002E4A26 /* ListViewController.swift */,
+				4BDAB8DB2687B24E002E4A26 /* AddLocationViewController.swift */,
+				4BDAB8DD2687B268002E4A26 /* InformationPostingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4BDAB8B72687AFC8002E4A26 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4BDAB8BB2687B07F002E4A26 /* OTMModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4BDAB8B82687AFE5002E4A26 /* OTM Client */ = {
+			isa = PBXGroup;
+			children = (
+				4BDAB8BD2687B09A002E4A26 /* OTMClient.swift */,
+			);
+			path = "OTM Client";
+			sourceTree = "<group>";
+		};
+		4BDAB8B92687AFEF002E4A26 /* OTM Request */ = {
+			isa = PBXGroup;
+			children = (
+				4BDAB8BF2687B0AF002E4A26 /* LogInRequest.swift */,
+			);
+			path = "OTM Request";
+			sourceTree = "<group>";
+		};
+		4BDAB8BA2687AFFA002E4A26 /* OTM Response */ = {
+			isa = PBXGroup;
+			children = (
+				4BDAB8C12687B0C9002E4A26 /* OTMResponse.swift */,
+				4BDAB8C32687B0E6002E4A26 /* SessionResponse.swift */,
+				4BDAB8C52687B0FA002E4A26 /* RequestTokenResponse.swift */,
+				4BDAB8C72687B117002E4A26 /* CreateStudentResponse.swift */,
+				4BDAB8C92687B12C002E4A26 /* GetStudentLocationResponse.swift */,
+				4BDAB8CB2687B14C002E4A26 /* Student.swift */,
+				4BDAB8CD2687B165002E4A26 /* GetPublicUserDataResponse.swift */,
+			);
+			path = "OTM Response";
+			sourceTree = "<group>";
+		};
+		4BDAB8DF2687B278002E4A26 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4BE8825A2687AA9000CD2C20 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		4BDAB8E02687B2A0002E4A26 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4BE882572687AA8E00CD2C20 /* Main.storyboard */,
+				4BE8825C2687AA9000CD2C20 /* LaunchScreen.storyboard */,
+				4BE882512687AA8E00CD2C20 /* AppDelegate.swift */,
+				4BE882532687AA8E00CD2C20 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4BE882452687AA8E00CD2C20 = {
 			isa = PBXGroup;
 			children = (
+				4BE8825F2687AA9000CD2C20 /* Info.plist */,
 				4BE882502687AA8E00CD2C20 /* OnTheMap */,
+				4BDAB8DF2687B278002E4A26 /* Assets */,
+				4BDAB8E02687B2A0002E4A26 /* Resources */,
 				4BE8824F2687AA8E00CD2C20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,13 +186,9 @@
 		4BE882502687AA8E00CD2C20 /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				4BE882512687AA8E00CD2C20 /* AppDelegate.swift */,
-				4BE882532687AA8E00CD2C20 /* SceneDelegate.swift */,
-				4BE882552687AA8E00CD2C20 /* ViewController.swift */,
-				4BE882572687AA8E00CD2C20 /* Main.storyboard */,
-				4BE8825A2687AA9000CD2C20 /* Assets.xcassets */,
-				4BE8825C2687AA9000CD2C20 /* LaunchScreen.storyboard */,
-				4BE8825F2687AA9000CD2C20 /* Info.plist */,
+				4BDAB8B42687AF97002E4A26 /* Model */,
+				4BDAB8B52687AF9E002E4A26 /* View */,
+				4BDAB8B62687AFA6002E4A26 /* Controller */,
 			);
 			path = OnTheMap;
 			sourceTree = "<group>";
@@ -137,9 +263,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BE882562687AA8E00CD2C20 /* ViewController.swift in Sources */,
+				4BDAB8CE2687B165002E4A26 /* GetPublicUserDataResponse.swift in Sources */,
+				4BDAB8D42687B1BE002E4A26 /* LoginTextField.swift in Sources */,
+				4BDAB8D22687B1A4002E4A26 /* Colours.swift in Sources */,
+				4BDAB8C82687B117002E4A26 /* CreateStudentResponse.swift in Sources */,
+				4BE882562687AA8E00CD2C20 /* LoginViewController.swift in Sources */,
+				4BDAB8C02687B0AF002E4A26 /* LogInRequest.swift in Sources */,
+				4BDAB8D02687B192002E4A26 /* GradientView.swift in Sources */,
+				4BDAB8DC2687B24E002E4A26 /* AddLocationViewController.swift in Sources */,
 				4BE882522687AA8E00CD2C20 /* AppDelegate.swift in Sources */,
+				4BDAB8DA2687B238002E4A26 /* ListViewController.swift in Sources */,
+				4BDAB8C42687B0E6002E4A26 /* SessionResponse.swift in Sources */,
+				4BDAB8BE2687B09A002E4A26 /* OTMClient.swift in Sources */,
+				4BDAB8CA2687B12C002E4A26 /* GetStudentLocationResponse.swift in Sources */,
+				4BDAB8CC2687B14C002E4A26 /* Student.swift in Sources */,
+				4BDAB8BC2687B07F002E4A26 /* OTMModel.swift in Sources */,
+				4BDAB8D82687B222002E4A26 /* MapViewController.swift in Sources */,
 				4BE882542687AA8E00CD2C20 /* SceneDelegate.swift in Sources */,
+				4BDAB8C62687B0FA002E4A26 /* RequestTokenResponse.swift in Sources */,
+				4BDAB8DE2687B268002E4A26 /* InformationPostingViewController.swift in Sources */,
+				4BDAB8D62687B1CC002E4A26 /* LoginButton.swift in Sources */,
+				4BDAB8C22687B0C9002E4A26 /* OTMResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
