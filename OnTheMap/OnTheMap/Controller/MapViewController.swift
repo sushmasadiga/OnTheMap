@@ -13,21 +13,24 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var addPin: UIBarButtonItem!
-    @IBOutlet weak var refresh: UIBarButtonItem!
     @IBOutlet weak var logout: UIBarButtonItem!
     
+    @IBOutlet weak var addPin: UIBarButtonItem!
+    @IBOutlet weak var refresh: UIBarButtonItem!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        mapView.delegate = self
-        refreshAtStart()
-    }
+    super.viewDidLoad()
+    mapView.delegate = self
+    refreshAtStart()
+}
     
     func refreshAtStart() {
         OTMClient.getStudentLocation(completion: self.handleGetStudentLocation(success:error:))
     }
     
+    @IBAction func addPinTapped(_ sender: Any) {
+        OTMClient.getStudentLocation(completion: self.handleGetStudentLocation(success:error:))
+    }
     
     @IBAction func refreshTapped(_ sender: Any) {
         OTMClient.getStudentLocation(completion: self.handleGetStudentLocation(success:error:))

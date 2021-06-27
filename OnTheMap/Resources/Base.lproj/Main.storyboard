@@ -72,7 +72,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlM-AU-o8a"/>
-                                                    <segue destination="b25-UH-nuY" kind="show" id="CJC-XA-N2d"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -180,30 +179,31 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="On The Map" id="Wdt-ol-9sc">
-                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="ZnQ-W9-JMA">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="lJb-PC-r7B" userLabel="logout">
                             <connections>
-                                <action selector="logoutTapped:" destination="iBc-l4-yeM" id="whs-Q8-JrR"/>
+                                <action selector="logoutTapped:" destination="iBc-l4-yeM" id="R9g-9z-Zpp"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem title="AddItem" image="icon_addpin" id="zEK-VG-Vu7">
+                            <barButtonItem image="icon_addpin" id="Del-hc-9pt" userLabel="insertPin">
                                 <connections>
-                                    <segue destination="qzY-Ya-9c8" kind="presentation" id="3mc-1a-Ea3"/>
+                                    <action selector="insertPinTapped:" destination="iBc-l4-yeM" id="j2O-0s-Kwe"/>
+                                    <segue destination="qzY-Ya-9c8" kind="presentation" id="Pgk-2n-5g0"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Refresh" image="icon_refresh" id="mae-Ja-Paq">
+                            <barButtonItem image="icon_refresh" id="96F-o4-DlJ" userLabel="refresh">
                                 <connections>
-                                    <action selector="refreshTapped:" destination="iBc-l4-yeM" id="Yqr-48-2xV"/>
+                                    <action selector="refreshTapped:" destination="iBc-l4-yeM" id="O4H-90-DZI"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="addPin" destination="zEK-VG-Vu7" id="ieA-6R-9B7"/>
-                        <outlet property="logout" destination="ZnQ-W9-JMA" id="eg0-2l-vod"/>
-                        <outlet property="refresh" destination="mae-Ja-Paq" id="g2I-g0-TJd"/>
-                        <outlet property="tableView" destination="B5A-Y3-AyM" id="Spr-yB-H0c"/>
+                        <outlet property="addPin" destination="Del-hc-9pt" id="sKO-BS-pu8"/>
+                        <outlet property="insertPin" destination="Del-hc-9pt" id="6od-IV-uXA"/>
+                        <outlet property="logout" destination="lJb-PC-r7B" id="TSc-W1-6Yv"/>
+                        <outlet property="refresh" destination="96F-o4-DlJ" id="aYY-Dl-0ME"/>
+                        <outlet property="tableView" destination="B5A-Y3-AyM" id="foO-C8-5oj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NrY-oJ-jno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -215,11 +215,11 @@
             <objects>
                 <viewController id="TaX-aT-kg1" customClass="MapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yEy-Gx-DTH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1qw-Ug-0b5">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="97" width="414" height="703"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
@@ -227,30 +227,30 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="On The Map" id="7RU-bj-ZlO">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="DxT-q9-Kza">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="2oE-YO-pbP">
                             <connections>
-                                <action selector="logOutTapped:" destination="TaX-aT-kg1" id="9FL-3E-t19"/>
+                                <action selector="logOutTapped:" destination="TaX-aT-kg1" id="NXt-ke-SdY"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem title="Refresh" image="icon_refresh" id="iPk-xN-LPp">
+                            <barButtonItem image="icon_addpin" id="k6f-6D-TFA">
                                 <connections>
-                                    <action selector="refreshTapped:" destination="TaX-aT-kg1" id="Aeh-RD-sVs"/>
+                                    <action selector="addPinTapped:" destination="TaX-aT-kg1" id="fcj-Ao-juy"/>
+                                    <segue destination="qzY-Ya-9c8" kind="presentation" id="01K-Bf-K3Z"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="icon_addpin" id="oKF-9l-FDV">
+                            <barButtonItem image="icon_refresh" id="dVY-By-eG1">
                                 <connections>
-                                    <segue destination="qzY-Ya-9c8" kind="presentation" id="hOP-wT-38m"/>
+                                    <action selector="refreshTapped:" destination="TaX-aT-kg1" id="Jhn-dk-6Q7"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="addPin" destination="oKF-9l-FDV" id="Rdu-IQ-R1t"/>
-                        <outlet property="logout" destination="DxT-q9-Kza" id="saZ-jN-LCV"/>
-                        <outlet property="mapView" destination="1qw-Ug-0b5" id="8k9-Kn-x4i"/>
-                        <outlet property="refresh" destination="iPk-xN-LPp" id="XO1-uH-SKY"/>
+                        <outlet property="addPin" destination="k6f-6D-TFA" id="iXo-YL-WEr"/>
+                        <outlet property="logout" destination="2oE-YO-pbP" id="CIK-Rf-1Dp"/>
+                        <outlet property="mapView" destination="1qw-Ug-0b5" id="YKG-jt-xwd"/>
+                        <outlet property="refresh" destination="dVY-By-eG1" id="CpH-Fg-78S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3B-U8-g5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -266,29 +266,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ho-cv-CdW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                <items>
-                                    <navigationItem title="Add Location" id="SjS-bd-qe0">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="WxG-Bo-0Av">
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <connections>
-                                                <action selector="cancelAddLocation:" destination="qzY-Ya-9c8" id="DE6-gf-Boj"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_world" translatesAutoresizingMaskIntoConstraints="NO" id="f6C-Ic-gz5">
-                                <rect key="frame" x="80" y="91" width="254" height="67"/>
+                                <rect key="frame" x="80" y="184" width="254" height="67"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="N1E-Oj-chJ">
-                                <rect key="frame" x="0.0" y="202" width="414" height="194"/>
+                                <rect key="frame" x="0.0" y="295" width="414" height="162"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Hq1-pN-p3q">
-                                        <rect key="frame" x="80" y="8" width="254" height="116"/>
+                                        <rect key="frame" x="80" y="8" width="254" height="84"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NBW-4x-1AJ" userLabel="Location">
-                                                <rect key="frame" x="0.0" y="0.0" width="254" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="254" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="sZU-re-8fE"/>
                                                 </constraints>
@@ -296,14 +286,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpc-CO-Yoc" userLabel="ProfileLink">
-                                                <rect key="frame" x="0.0" y="66" width="254" height="50"/>
+                                                <rect key="frame" x="0.0" y="50" width="254" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hs-Vt-dRz">
-                                        <rect key="frame" x="80" y="136" width="254" height="50"/>
+                                        <rect key="frame" x="80" y="104" width="254" height="50"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ifx-aY-seZ"/>
@@ -320,6 +310,20 @@
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="80" bottom="8" right="80"/>
                             </stackView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JGx-ZK-Af6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Location" id="v0K-I8-XKo">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;AddLocation" id="rAl-CY-hIT"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="dHT-Wk-uKc">
+                                            <connections>
+                                                <action selector="cancelAddLocation:" destination="qzY-Ya-9c8" id="ZUe-Ma-mqk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rfy-uU-8RV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -340,6 +344,7 @@
                     <connections>
                         <outlet property="FindLocationButton" destination="8hs-Vt-dRz" id="7CO-W2-svD"/>
                         <outlet property="LocationTextField" destination="NBW-4x-1AJ" id="Rw8-KK-1nQ"/>
+                        <outlet property="locationTextField" destination="NBW-4x-1AJ" id="X69-N3-1WN"/>
                         <outlet property="profileLinkTextField" destination="wpc-CO-Yoc" id="Ele-xX-8Um"/>
                     </connections>
                 </viewController>
@@ -363,7 +368,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="&gt;AddLocation" id="s0e-aM-FBM">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <action selector="addLocation:" destination="Jwk-yg-ilP" id="hYd-LG-alj"/>
+                                                <action selector="AddLocation:" destination="Jwk-yg-ilP" id="lhb-3m-y0D"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -385,7 +390,7 @@
                                 </state>
                                 <connections>
                                     <action selector="finishAddLocation:" destination="Jwk-yg-ilP" eventType="touchUpInside" id="irf-XK-ShG"/>
-                                    <segue destination="TaX-aT-kg1" kind="presentation" identifier="backToMap" id="DyJ-rN-iuq"/>
+                                    <segue destination="TaX-aT-kg1" kind="presentation" id="0gz-Qb-hqs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -398,6 +403,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="finishAddLocation" destination="HMl-Zo-qH5" id="wia-cw-xeG"/>
                         <outlet property="mapView" destination="924-Uc-uAA" id="NEV-yt-f86"/>
                     </connections>
                 </viewController>
@@ -436,7 +442,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="TaX-aT-kg1" kind="relationship" relationship="rootViewController" id="YVY-WW-cAg"/>
+                        <segue destination="TaX-aT-kg1" kind="relationship" relationship="rootViewController" id="BJh-CS-2XS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tk-gX-wFn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -455,7 +461,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="iBc-l4-yeM" kind="relationship" relationship="rootViewController" id="bXq-Kz-buq"/>
+                        <segue destination="iBc-l4-yeM" kind="relationship" relationship="rootViewController" id="hnT-Fl-j2b"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L04-1D-zTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -464,9 +470,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cvd-7P-mbd"/>
-        <segue reference="hOP-wT-38m"/>
-        <segue reference="YVY-WW-cAg"/>
+        <segue reference="01K-Bf-K3Z"/>
+        <segue reference="0gz-Qb-hqs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_addpin" width="24" height="24"/>
