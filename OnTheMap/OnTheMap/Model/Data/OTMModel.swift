@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class OTMModel {
+    
+    static var student = [Student]()
+}

@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct LoginRequest: Encodable {
+    let udacity: UdacityUsernamePassword
+}
+    
+struct UdacityUsernamePassword: Encodable {
+    let username: String
+    let password: String
+}

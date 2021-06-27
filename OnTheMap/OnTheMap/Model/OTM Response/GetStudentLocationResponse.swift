@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct GetStudentLocationResponse: Codable {
+    let results: [Student]
+    
+    enum CodingKeys: String, CodingKey {
+        case results
+    }
+}

@@ -164,6 +164,20 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4BDAB8E12688945B002E4A26 /* OnTheMapTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnTheMapTests;
+			sourceTree = "<group>";
+		};
+		4BDAB8E4268894BA002E4A26 /* OnTheMapUItests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnTheMapUItests;
+			sourceTree = "<group>";
+		};
 		4BE882452687AA8E00CD2C20 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +185,8 @@
 				4BE882502687AA8E00CD2C20 /* OnTheMap */,
 				4BDAB8DF2687B278002E4A26 /* Assets */,
 				4BDAB8E02687B2A0002E4A26 /* Resources */,
+				4BDAB8E12688945B002E4A26 /* OnTheMapTests */,
+				4BDAB8E4268894BA002E4A26 /* OnTheMapUItests */,
 				4BE8824F2687AA8E00CD2C20 /* Products */,
 			);
 			sourceTree = "<group>";
