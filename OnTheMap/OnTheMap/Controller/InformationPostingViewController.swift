@@ -21,7 +21,7 @@ class InformationPostingViewController: UIViewController {
     @IBOutlet weak var locationTextField: UITextField!
     
     @IBOutlet weak var profileLinkTextField: UITextField!
-    @IBOutlet weak var FindLocationButton: UIButton!
+    @IBOutlet weak var findLocationButton: UIButton!
     
     var segueIdentifier: String = ""
 

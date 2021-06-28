@@ -28,9 +28,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         OTMClient.getStudentLocation(completion: self.handleGetStudentLocation(success:error:))
     }
     
-    @IBAction func addPinTapped(_ sender: Any) {
-        OTMClient.getStudentLocation(completion: self.handleGetStudentLocation(success:error:))
-    }
+    
     
     @IBAction func refreshTapped(_ sender: Any) {
         OTMClient.getStudentLocation(completion: self.handleGetStudentLocation(success:error:))

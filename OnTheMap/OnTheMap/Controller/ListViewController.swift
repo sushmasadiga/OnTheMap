@@ -9,15 +9,14 @@ import UIKit
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var insertPin: UIBarButtonItem!
+    @IBOutlet weak var addPin: UIBarButtonItem!
+    
     @IBOutlet weak var refresh: UIBarButtonItem!
     
     @IBOutlet weak var logout: UIBarButtonItem!
+    
     @IBOutlet weak var tableView: UITableView!
-    
-    
     var students = [Student]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshAtStart()
@@ -32,9 +31,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
     }
     
-    @IBAction func insertPinTapped(_ sender: Any) {
-        OTMClient.getStudentLocation(completion: self.handleGetStudentLocation(success:error:))
-    }
+
     
     @IBAction func refreshTapped(_ sender: Any) {
         OTMClient.getStudentLocation(completion: self.handleGetStudentLocation(success:error:))
