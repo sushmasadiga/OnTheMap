@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="-1013" y="-235"/>
         </scene>
-        <!--On The Map-->
+        <!--List -->
         <scene sceneID="Byf-Vb-3ce">
             <objects>
-                <viewController id="BfH-YZ-o14" customClass="ListViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="List " id="BfH-YZ-o14" customClass="ListViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Xb-Ni-FRe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,6 +170,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1Xb-Ni-FRe" id="P1J-jQ-DJL"/>
+                                    <outlet property="delegate" destination="1Xb-Ni-FRe" id="G19-Uu-iVQ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1hv-GQ-ce1"/>
@@ -220,7 +224,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nYc-IF-skr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zwB-FY-yc4"/>
@@ -312,6 +316,11 @@
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="32" bottom="8" right="32"/>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="pBz-Ok-Eaa">
+                                <rect key="frame" x="185" y="605" width="44" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gye-Hc-ONn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -326,6 +335,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="pBz-Ok-Eaa" id="7qo-zW-UHF"/>
                         <outlet property="findLocationButton" destination="khM-zb-LMN" id="tSs-ZG-Srz"/>
                         <outlet property="locationTextField" destination="1Bi-gn-8zF" id="jDS-jd-4uC"/>
                         <outlet property="profileLinkTextField" destination="L6n-oZ-HmO" id="VLt-t9-11t"/>
@@ -334,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHS-ho-Wqy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3665" y="-253"/>
+            <point key="canvasLocation" x="3663.7681159420295" y="-253.125"/>
         </scene>
         <!--Add Location View Controller-->
         <scene sceneID="n3X-a5-GYG">
@@ -373,7 +383,6 @@
                                 </state>
                                 <connections>
                                     <action selector="finishAddLocation:" destination="lvU-Dv-aGg" eventType="touchUpInside" id="oTJ-7C-xaC"/>
-                                    <segue destination="gfB-WN-Mh2" kind="presentation" identifier="backToMap" id="vvR-nD-SQW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -399,7 +408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arx-jY-dDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4671.0144927536239" y="-253.125"/>
+            <point key="canvasLocation" x="4513" y="-253"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fl4-Z3-65t">
@@ -447,6 +456,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tGo-9X-x9O" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ctg-I3-MZg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -462,7 +472,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="woR-tN-5PQ"/>
-        <segue reference="vvR-nD-SQW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_world" width="52" height="67"/>

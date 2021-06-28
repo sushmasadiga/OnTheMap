@@ -37,6 +37,7 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate {
     
     @IBAction func finishAddLocation(_ sender: Any) {
         self.createStudentLocation()
+        navigationController?.popToRootViewController(animated: true)
     }
     
     func createStudentLocation() {
@@ -45,7 +46,6 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate {
     
     func handleCreateStudentLocation(success: Bool, error: Error?) {
         if (success) {
-            performSegue(withIdentifier: segueIdentifier, sender: self)
             self.dismiss(animated: true, completion: nil)
         }
         else {
@@ -74,6 +74,7 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate {
         if( appDelegate.placemark?.location?.coordinate != nil) {
             annotation.coordinate = (appDelegate.placemark?.location?.coordinate)!
         }
+        
         annotation.title = appDelegate.mapString
         annotations.append(annotation)
         
@@ -84,7 +85,6 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         let reuseId = "pin"
-        
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
         
         if pinView == nil {
@@ -106,19 +106,4 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate {
                 app.open(URL(string: toOpen)!)
             }}
     }
-    
-    func showFailure(failureType: String, message: String) {
-        let alertVC = UIAlertController(title: failureType, message: message, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alertVC, animated:true)
-    }
-    
-    @IBAction func backToMap(_ sender: Any) {
-        performSegue(withIdentifier: "unwindToMap", sender: self)
-    }
-    
-    @IBAction func backToList(_ sender: Any) {
-        performSegue(withIdentifier: "unwindToList", sender: self)
-    }
-    
 }

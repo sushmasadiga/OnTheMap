@@ -19,22 +19,22 @@ class InformationPostingViewController: UIViewController {
     var mediaURL: String?
     
     @IBOutlet weak var locationTextField: UITextField!
-    
     @IBOutlet weak var profileLinkTextField: UITextField!
     @IBOutlet weak var findLocationButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    var segueIdentifier: String = ""
-
     override func viewDidLoad() {
-      super.viewDidLoad()
+        super.viewDidLoad()
+        locationTextField.text = ""
+        profileLinkTextField.text = ""
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.hidesWhenStopped = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
-           locationTextField.text = ""
-           profileLinkTextField.text = ""
-           navigationController?.setNavigationBarHidden(false, animated: animated)
-       }
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     @IBAction func cancelAddLocation(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -45,37 +45,31 @@ class InformationPostingViewController: UIViewController {
             self.findLocation()
         }
         else {
+            handleActivityIndicator(true)
             self.showFindLocationFailure(message: "Link is Empty")
         }
     }
+    
     func findLocation() {
         CLGeocoder().geocodeAddressString((self.locationTextField.text ?? ""), completionHandler: handleFindLocation(placemarks:error:))
     }
     
     func handleFindLocation(placemarks: [CLPlacemark]?, error: Error?) {
         if (placemarks != nil) {
+            handleActivityIndicator(false)
             appDelegate.placemark = placemarks?[0]
             appDelegate.mapString = self.locationTextField.text
             appDelegate.mediaURL = self.profileLinkTextField.text
-
+            
             self.performSegue(withIdentifier: "tabAddLocation", sender: nil)
         }
         else {
+            handleActivityIndicator(false)
             showFindLocationFailure(message: "Geocoding Failed")
         }
     }
     
-    func showFindLocationFailure(message: String) {
-        let alertVC = UIAlertController(title: "Find Location Failed", message: message, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alertVC, animated:true)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
-        let alvc = segue.destination as! AddLocationViewController
-        alvc.placemark = placemark
-        alvc.mapString = mapString
-        alvc.mediaURL = mediaURL
-        alvc.segueIdentifier = segueIdentifier
+    func handleActivityIndicator(_ isFinding: Bool) {
+        isFinding ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
     }
 }

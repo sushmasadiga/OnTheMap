@@ -10,16 +10,17 @@ import UIKit
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var addPin: UIBarButtonItem!
-    
     @IBOutlet weak var refresh: UIBarButtonItem!
-    
     @IBOutlet weak var logout: UIBarButtonItem!
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    
     var students = [Student]()
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshAtStart()
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     func refreshAtStart() {
@@ -31,8 +32,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
     }
     
-
-    
     @IBAction func refreshTapped(_ sender: Any) {
         OTMClient.getStudentLocation(completion: self.handleGetStudentLocation(success:error:))
     }
@@ -40,7 +39,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func logoutTapped(_ sender: Any) {
         OTMClient.logout {
             DispatchQueue.main.async {
-              self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }
@@ -63,30 +62,23 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return OTMModel.student.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell")!
-       let studentForRow = OTMModel.student[indexPath.row]
-      
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell")!
+        let studentForRow = OTMModel.student[indexPath.row]
+        
         cell.textLabel?.text = studentForRow.firstName + " " + studentForRow.lastName
         cell.detailTextLabel?.text = studentForRow.mediaURL
-       cell.imageView?.image = UIImage(named: "pin")
-       return cell
+        cell.imageView?.image = UIImage(named: "pin")
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let student = OTMModel.student[indexPath.row]
-          if student.mediaURL != "" {
+        if student.mediaURL != "" {
             UIApplication.shared.open(URL(string: student.mediaURL)!)
-       }
-     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
-        let ipvc = segue.destination as! InformationPostingViewController
-        ipvc.segueIdentifier = "unwindToList"
+        }
+        
     }
-      
-    @IBAction func unwindToList(segue:UIStoryboardSegue) { }
     
-    }
-
+}

@@ -18,10 +18,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.text = ""
-        passwordTextField.text = ""
+        passwordTextField.isSecureTextEntry = true
         self.activityIndicator.isHidden = true
         self.activityIndicator.hidesWhenStopped = true
-       }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -46,11 +46,7 @@ class LoginViewController: UIViewController {
     }
     
     func setLoggingIn(_ loggingIn: Bool) {
-        if loggingIn {
-            activityIndicator.startAnimating()
-        } else {
-            activityIndicator.stopAnimating()
-        }
+        loggingIn ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
         emailTextField.isEnabled = !loggingIn
         passwordTextField.isEnabled = !loggingIn
         loginButton.isEnabled = !loggingIn
@@ -61,13 +57,6 @@ class LoginViewController: UIViewController {
         if let url = URL(string: "https://auth.udacity.com/sign-up") {
             UIApplication.shared.open(url)
         }
-    }
-    
-    func showAlert(message: String) {
-        unsubscribeFromKeyboardNotifications()
-        let alertVC = UIAlertController(title: "Login Failed", message: message, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alertVC, animated:true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -81,8 +70,7 @@ class LoginViewController: UIViewController {
     }
     
     func unsubscribeFromKeyboardNotifications() {
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self)
     }
     
     @objc func keyboardWillShow(_ notification:Notification) {
@@ -102,7 +90,5 @@ class LoginViewController: UIViewController {
         let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
         return keyboardSize.cgRectValue.height
     }
-    
-    
 }
 

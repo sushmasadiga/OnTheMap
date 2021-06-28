@@ -14,21 +14,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var logout: UIBarButtonItem!
-    
     @IBOutlet weak var addPin: UIBarButtonItem!
     @IBOutlet weak var refresh: UIBarButtonItem!
     
     override func viewDidLoad() {
-    super.viewDidLoad()
-    mapView.delegate = self
-    refreshAtStart()
-}
+        super.viewDidLoad()
+        mapView.delegate = self
+        refreshAtStart()
+    }
     
     func refreshAtStart() {
         OTMClient.getStudentLocation(completion: self.handleGetStudentLocation(success:error:))
     }
-    
-    
     
     @IBAction func refreshTapped(_ sender: Any) {
         OTMClient.getStudentLocation(completion: self.handleGetStudentLocation(success:error:))
@@ -37,7 +34,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBAction func logOutTapped(_ sender: Any) {
         OTMClient.logout {
             DispatchQueue.main.async {
-              self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }
@@ -51,29 +48,30 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func drawMap() {
-       
-       var annotations = [MKPointAnnotation]()
-       
-       for i in 0..<OTMModel.student.count
-
-       {
-        let lat = CLLocationDegrees(OTMModel.student[i].latitude )
-        let long = CLLocationDegrees(OTMModel.student[i].longitude )
-        let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
-                   
-        let first = OTMModel.student[i].firstName
-        let last = OTMModel.student[i].lastName
-        let mediaURL = OTMModel.student[i].mediaURL
-       
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coordinate
-        annotation.title = "\(first) \(last)"
-        annotation.subtitle = mediaURL
-                   
-        annotations.append(annotation)
-       }
-               
-    self.mapView.addAnnotations(annotations)
+        
+        var annotations = [MKPointAnnotation]()
+        
+        for i in 0..<OTMModel.student.count
+        
+        {
+            let lat = CLLocationDegrees(OTMModel.student[i].latitude )
+            let long = CLLocationDegrees(OTMModel.student[i].longitude )
+            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            
+            let first = OTMModel.student[i].firstName
+            let last = OTMModel.student[i].lastName
+            let mediaURL = OTMModel.student[i].mediaURL
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            annotation.title = "\(first) \(last)"
+            annotation.subtitle = mediaURL
+            
+            annotations.append(annotation)
+        }
+        
+        self.mapView.addAnnotations(annotations)
+        mapView.removeAnnotations(mapView.annotations)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -81,14 +79,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let reuseId = "pin"
         
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
-
+        
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
             pinView!.pinTintColor = .red
             
             pinView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-
+            
         }
         else {
             pinView!.annotation = annotation
@@ -110,14 +108,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alertVC, animated:true)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
-        let ipvc = segue.destination as! InformationPostingViewController
-        ipvc.segueIdentifier = "unwindToMap"
-    }
-    
-    @IBAction func unwindToMap(segue:UIStoryboardSegue) { }
-    
 }
 
 

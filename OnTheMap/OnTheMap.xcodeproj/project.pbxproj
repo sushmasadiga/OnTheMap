@@ -25,6 +25,7 @@
 		4BDAB8DA2687B238002E4A26 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8D92687B238002E4A26 /* ListViewController.swift */; };
 		4BDAB8DC2687B24E002E4A26 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8DB2687B24E002E4A26 /* AddLocationViewController.swift */; };
 		4BDAB8DE2687B268002E4A26 /* InformationPostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB8DD2687B268002E4A26 /* InformationPostingViewController.swift */; };
+		4BDAB90F268A5042002E4A26 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDAB90E268A5042002E4A26 /* Extensions.swift */; };
 		4BE882522687AA8E00CD2C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE882512687AA8E00CD2C20 /* AppDelegate.swift */; };
 		4BE882542687AA8E00CD2C20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE882532687AA8E00CD2C20 /* SceneDelegate.swift */; };
 		4BE882562687AA8E00CD2C20 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE882552687AA8E00CD2C20 /* LoginViewController.swift */; };
@@ -52,6 +53,7 @@
 		4BDAB8D92687B238002E4A26 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4BDAB8DB2687B24E002E4A26 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		4BDAB8DD2687B268002E4A26 /* InformationPostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPostingViewController.swift; sourceTree = "<group>"; };
+		4BDAB90E268A5042002E4A26 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4BE8824E2687AA8E00CD2C20 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE882512687AA8E00CD2C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BE882532687AA8E00CD2C20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				4BDAB8D92687B238002E4A26 /* ListViewController.swift */,
 				4BDAB8DB2687B24E002E4A26 /* AddLocationViewController.swift */,
 				4BDAB8DD2687B268002E4A26 /* InformationPostingViewController.swift */,
+				4BDAB90E268A5042002E4A26 /* Extensions.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				4BDAB8D02687B192002E4A26 /* GradientView.swift in Sources */,
 				4BDAB8DC2687B24E002E4A26 /* AddLocationViewController.swift in Sources */,
 				4BE882522687AA8E00CD2C20 /* AppDelegate.swift in Sources */,
+				4BDAB90F268A5042002E4A26 /* Extensions.swift in Sources */,
 				4BDAB8DA2687B238002E4A26 /* ListViewController.swift in Sources */,
 				4BDAB8C42687B0E6002E4A26 /* SessionResponse.swift in Sources */,
 				4BDAB8BE2687B09A002E4A26 /* OTMClient.swift in Sources */,
