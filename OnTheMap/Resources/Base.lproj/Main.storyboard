@@ -220,7 +220,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nYc-IF-skr">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zwB-FY-yc4"/>
@@ -233,7 +233,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="On The Map" id="ThU-oA-7vU">
-                        <barButtonItem key="leftBarButtonItem" title="logout" id="6o2-hd-ATB">
+                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="6o2-hd-ATB">
                             <connections>
                                 <action selector="logOutTapped:" destination="gfB-WN-Mh2" id="adD-4Z-O3X"/>
                             </connections>
@@ -291,12 +291,12 @@
                                             <constraint firstAttribute="height" constant="127" id="vw5-hQ-psg"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Bi-gn-8zF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SACRAMENTO, US" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Bi-gn-8zF">
                                         <rect key="frame" x="32" y="193" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L6n-oZ-HmO">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.linkedin.com/in/austin-casgef" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L6n-oZ-HmO">
                                         <rect key="frame" x="32" y="285" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -334,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHS-ho-Wqy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3727.5362318840585" y="-249.10714285714283"/>
+            <point key="canvasLocation" x="3665" y="-253"/>
         </scene>
         <!--Add Location View Controller-->
         <scene sceneID="n3X-a5-GYG">
@@ -350,7 +350,7 @@
                                     <constraint firstAttribute="height" constant="44" id="dk7-sl-OzU"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Add location" id="Dea-WO-UUW">
+                                    <navigationItem title="Location" id="Dea-WO-UUW">
                                         <barButtonItem key="leftBarButtonItem" title="&gt; Add Location" id="uI2-y8-WmI">
                                             <connections>
                                                 <action selector="AddLocation:" destination="lvU-Dv-aGg" id="Lj8-yv-55D"/>
@@ -373,7 +373,7 @@
                                 </state>
                                 <connections>
                                     <action selector="finishAddLocation:" destination="lvU-Dv-aGg" eventType="touchUpInside" id="oTJ-7C-xaC"/>
-                                    <segue destination="gfB-WN-Mh2" kind="presentation" identifier="backtoMap" id="vvR-nD-SQW"/>
+                                    <segue destination="gfB-WN-Mh2" kind="presentation" identifier="backToMap" id="vvR-nD-SQW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -462,7 +462,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="woR-tN-5PQ"/>
-        <segue reference="3XW-L8-uDU"/>
+        <segue reference="vvR-nD-SQW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_world" width="52" height="67"/>

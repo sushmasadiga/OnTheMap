@@ -85,8 +85,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         let ipvc = segue.destination as! InformationPostingViewController
         ipvc.segueIdentifier = "unwindToList"
     }
-    
+      
     @IBAction func unwindToList(segue:UIStoryboardSegue) { }
-        
+    
     }
 
