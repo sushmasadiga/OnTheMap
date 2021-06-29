@@ -31,10 +31,6 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate {
         self.getPublicUserInformation()
     }
     
-    @IBAction func AddLocation(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func finishAddLocation(_ sender: Any) {
         self.createStudentLocation()
         navigationController?.popToRootViewController(animated: true)
@@ -46,7 +42,7 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate {
     
     func handleCreateStudentLocation(success: Bool, error: Error?) {
         if (success) {
-            self.dismiss(animated: true, completion: nil)
+            view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         }
         else {
             showFailure(failureType: "Can not create Student Location", message: error?.localizedDescription ?? "")

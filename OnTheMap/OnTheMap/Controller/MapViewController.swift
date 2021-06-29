@@ -70,8 +70,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             annotations.append(annotation)
         }
         
-        self.mapView.addAnnotations(annotations)
         mapView.removeAnnotations(mapView.annotations)
+        self.mapView.addAnnotations(annotations)
+        
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

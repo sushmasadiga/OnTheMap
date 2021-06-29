@@ -51,6 +51,7 @@ class InformationPostingViewController: UIViewController {
     }
     
     func findLocation() {
+        handleActivityIndicator(true)
         CLGeocoder().geocodeAddressString((self.locationTextField.text ?? ""), completionHandler: handleFindLocation(placemarks:error:))
     }
     
